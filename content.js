@@ -1,15 +1,22 @@
 // content.js
 //alert("Hello from TA clicker, be carefull when using this!")
-var number = prompt("Welcome to TA-Clicker, use this at your own risk! \n Please fill in your queue number: ");
+var number = 0;
+
+chrome.runtime.sendMessage({message: "id?"}, function(response) {
+    console.log(response);
+    // number = id;
+    clickButton();
+  });
 
 function clickButton() {
-    var button = document.getElementById("lab-" + number);
-    if (button.style.display != 'none') {
-        button.click();
+    var planets = document.getElementById("lab-" + number);
+    console.log("checking if I can click!");
+    if (planets != null && planets.style.display != 'none') {
+        console.log("Clicking!");
+        planets.click();
     }
-var millisecondsToWait = 200;
+var millisecondsToWait = 500;
 setTimeout(clickButton, millisecondsToWait);
 }
 
-clickButton();
 

@@ -9,5 +9,6 @@
       ],
       "js": ["content.js"]
     }
-  ]
+  ], 
+  "background": ["background.js"]
 }
