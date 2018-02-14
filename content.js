@@ -4,12 +4,12 @@ var number = prompt("Welcome to TA-Clicker, use this at your own risk! \n Please
 
 function clickButton() {
     var button = document.getElementById("lab-" + number);
-    if (button != null && button.style.display != 'none') {
-        console.log("Clicking!");
-        planets.click();
+    if (button.style.display != 'none') {
+        button.click();
     }
 var millisecondsToWait = 200;
 setTimeout(clickButton, millisecondsToWait);
 }
 
+clickButton();
 
