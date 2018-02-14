@@ -8,7 +8,7 @@ function clickButton() {
         console.log("Clicking!");
         planets.click();
     }
-var millisecondsToWait = 500;
+var millisecondsToWait = 200;
 setTimeout(clickButton, millisecondsToWait);
 }
 
